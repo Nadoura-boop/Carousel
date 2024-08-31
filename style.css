@@ -1,0 +1,81 @@
+.container{
+    padding:2rem 1rem;
+}
+.slider{
+   width: 800px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+   box-shadow: 0 1rem 3rem 2rem hsla(0, 0%, 0%, 0.153);
+   border-radius: 0.5rem;
+}
+.slider .list{
+    position: absolute;
+    display: flex;
+    transition: 1s;
+    
+
+}
+ 
+
+.slider .list img{
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+     flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    scroll-snap-align:start;
+    object-fit: cover;
+
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+        width: 700px;
+    }
+}
